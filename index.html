@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+  <title>page1</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js">
+  </script>
+
+  <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
+  </script>
+  <script type="text/javascript" language="javascript" class="init">
+
+
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+
+
+  </script>
+</head>
+<body class="dt-example">
+<div class="container">
+  <h1>Problem case: PAGE 1</h1>
+
+  <h2>Example</h2>
+  <p>
+  <ol>
+    <li>View table on <a href="page2.html">page 2</a>.<br/>
+  <img src="./images/page2-initial.png" width="50%"></li>
+    <li>Sort the list by name. <br/><img src="./images/page2-step1.png" width="50%"></li>
+    <li>Select top two checkboxes and adjust text. <br/><img src="./images/page2-step2.png" width="50%"></li>
+    <li>Click link to go to meaningless page 3</li>
+    <li>Click browser back button</li>
+
+    <li>Expected outcome (in Firefox)
+    <br><img src="./images/page2-step4-firefox-after-back.png" width="50%">
+    </li>
+
+    <li>Problematic outcome in Chrome/Safari
+    <br><img src="./images/page2-step4-chrome-safari-after-back.png" width="50%"></li>
+  </ol>
+
+  <h2>Workaround: use <code>autocomplete="off"</code></h2>
+  <p>View table on <a href="page4.html">page 4</a>.</p>
+  <ol>
+    <li>Sort the list by name. </li>
+    <li>Select top two checkboxes and adjust text.</li>
+    <li>Click link to go to meaningless page 3</li>
+    <li>Click browser back button</li>
+  </ol>
+</div>
+</body>
